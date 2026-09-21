@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kavala Luxury Stays & Apartments</title>
+  
+  <!-- Flatpickr CSS for Availability Calendars -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      background-color: #f4f6f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #003580 0%, #00224f 100%);
+      color: white;
+      padding: 3rem 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+
+    header p {
+      font-size: 1.15rem;
+      opacity: 0.9;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
+    }
+
+    .properties-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: white;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+    }
+
+    .card-img {
+      width: 100%;
+      height: 230px;
+      object-fit: cover;
+      background-color: #e0e0e0;
+    }
+
+    .card-body {
+      padding: 1.5rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .badge {
+      display: inline-block;
+      align-self: flex-start;
+      background-color: #e8f0fe;
+      color: #003580;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.25rem 0.6rem;
+      border-radius: 20px;
+      margin-bottom: 0.5rem;
+      text-transform: uppercase;
+    }
+
+    .card-title {
+      font-size: 1.35rem;
+      margin-bottom: 0.5rem;
+      color: #111;
+    }
+
+    .card-location {
+      font-size: 0.9rem;
+      color: #666;
+      margin-bottom: 0.8rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .card-desc {
+      font-size: 0.92rem;
+      color: #555;
+      margin-bottom: 1.2rem;
+      flex-grow: 1;
+    }
+
+    .amenities {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-bottom: 1.2rem;
+    }
+
+    .tag {
+      background: #f1f3f5;
+      color: #495057;
+      font-size: 0.78rem;
+      padding: 0.3rem 0.6rem;
+      border-radius: 4px;
+      font-weight: 500;
+    }
+
+    .calendar-box {
+      background: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      border: 1px solid #e9ecef;
+      margin-bottom: 1rem;
+    }
+
+    .calendar-box label {
+      display: block;
+      font-weight: 600;
+      font-size: 0.85rem;
+      margin-bottom: 0.4rem;
+      color: #333;
+    }
+
+    .calendar-input {
+      width: 100%;
+      padding: 0.65rem;
+      border: 1px solid #ced4da;
+      border-radius: 6px;
+      font-size: 0.9rem;
+      background-color: white;
+      cursor: pointer;
+    }
+
+    .btn {
+      display: block;
+      width: 100%;
+      text-align: center;
+      background-color: #0071c2;
+      color: white;
+      text-decoration: none;
+      padding: 0.8rem;
+      border-radius: 6px;
+      font-weight: bold;
+      transition: background-color 0.2s ease;
+    }
+
+    .btn:hover {
+      background-color: #005999;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: #6c757d;
+      font-size: 0.9rem;
+      margin-top: 3rem;
+      border-top: 1px solid #dee2e6;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Kavala City Stay Apartments</h1>
+    <p>Explore unique stays in Kavala, Greece & check live availability</p>
+  </header>
+
+  <div class="container">
+    <div class="properties-grid">
+
+      <!-- Property 1: Cosy Studio in Down Town -->
+      <div class="card">
+        <img src="https://q-xx.bstatic.com/xdata/images/hotel/max500/134070834.jpg?k=614cdadf8bd901a395dfffc2d770de30f45eb0aa1efd7465a4cbba6102aad7a1&o=" alt="Cosy Studio Downtown Kavala" class="card-img">
+        <div class="card-body">
+          <span class="badge">Downtown</span>
+          <h2 class="card-title">Cosy Studio in Down Town</h2>
+          <div class="card-location">📍 Kavala Center (Near Rapsani Beach & Archaeological Museum)</div>
+          <p class="card-desc">A comfortable studio ideal for couples or solo travelers visiting the central town. Fully air-conditioned with modern amenities, free WiFi, and a well-equipped kitchen.</p>
+          
+          <div class="amenities">
+            <span class="tag">📶 Free WiFi</span>
+            <span class="tag">❄️ Air Conditioning</span>
+            <span class="tag">🍳 Kitchen</span>
+            <span class="tag">🧺 Washing Machine</span>
+          </div>
+
+          <div class="calendar-box">
+            <label for="cal-1">Check Availability Calendar:</label>
+            <input type="text" id="cal-1" class="calendar-input" placeholder="Select dates to check...">
+          </div>
+
+          <a href="https://www.booking.com/hotel/gr/cosy-studio-in-down-town.html" target="_blank" class="btn">Book on Booking.com</a>
+        </div>
+      </div>
+
+      <!-- Property 2: My Wabi Home Kavala -->
+      <div class="card">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max500/888142774.jpg?k=c367592a0146f2ee46b35b0c7061fbaef417118dd3d7eb94fe1a76a88334d152&o=&hp=1" alt="My Wabi Home Kavala" class="card-img">
+        <div class="card-body">
+          <span class="badge">Boutique Design</span>
+          <h2 class="card-title">My Wabi Home Kavala Down Town</h2>
+          <div class="card-location">📍 Central Kavala (Walkable to port & marketplace)</div>
+          <p class="card-desc">Designed around Japanese Wabi-Sabi aesthetic, focusing on natural textures, simplicity, and serene comfort. Features a balcony, cozy living area, and premium finishes.</p>
+          
+          <div class="amenities">
+            <span class="tag">🌿 Wabi-Sabi Decor</span>
+            <span class="tag">🌅 Balcony</span>
+            <span class="tag">📶 High-Speed WiFi</span>
+            <span class="tag">☕ Espresso Machine</span>
+          </div>
+
+          <div class="calendar-box">
+            <label for="cal-2">Check Availability Calendar:</label>
+            <input type="text" id="cal-2" class="calendar-input" placeholder="Select dates to check...">
+          </div>
+
+          <a href="https://www.booking.com/hotel/gr/my-wabi-home-kavala-down-town.html" target="_blank" class="btn">Book on Booking.com</a>
+        </div>
+      </div>
+
+      <!-- Property 3: Sun Rise Suite -->
+      <div class="card">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/874271103.jpg?k=e5de19010168fd52578f7cb314106114c4463bb214ac648c2c1524b479ec58f2&o=" alt="Sun Rise Suite Kavala" class="card-img">
+        <div class="card-body">
+          <span class="badge">Sea View</span>
+          <h2 class="card-title">Sun Rise Suite</h2>
+          <div class="card-location">📍 Coastal Kavala (Panoramic Aegean Views)</div>
+          <p class="card-desc">Features an expansive outdoor terrace directly overlooking the Aegean Sea. Perfect for enjoying morning sunrises, relaxing in a bright living space, and coastal living.</p>
+          
+          <div class="amenities">
+            <span class="tag">🌊 Panoramic Sea View</span>
+            <span class="tag">☀️ Sun Terrace</span>
+            <span class="tag">🛋️ Spacious Lounge</span>
+            <span class="tag">📶 Free WiFi</span>
+          </div>
+
+          <div class="calendar-box">
+            <label for="cal-3">Check Availability Calendar:</label>
+            <input type="text" id="cal-3" class="calendar-input" placeholder="Select dates to check...">
+          </div>
+
+          <a href="https://www.booking.com/hotel/gr/sun-rise-suite.html" target="_blank" class="btn">Book on Booking.com</a>
+        </div>
+      </div>
+
+      <!-- Property 4: Ntolos House Old Town -->
+      <div class="card">
+        <img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/829248205.jpg?k=d356a6e5d44ea9a8198fcf6ea2a6cc7abc344fc76b1f7fbbd77466d8bfd31f71&o=" alt="Ntolos House Old Town Kavala" class="card-img">
+        <div class="card-body">
+          <span class="badge">Old Town Historic</span>
+          <h2 class="card-title">Ntolos House Old Town</h2>
+          <div class="card-location">📍 Panagia (Old Town Castle Peninsula)</div>
+          <p class="card-desc">Charming historic residence located in the heart of Kavala's traditional Old Town. Surrounded by cobbled alleyways, stone architecture, and stunning sea overlooks.</p>
+          
+          <div class="amenities">
+            <span class="tag">🏰 Historic Quarter</span>
+            <span class="tag">👨‍👩‍👧 Family Friendly</span>
+            <span class="tag">🍳 Fully Equipped</span>
+            <span class="tag">📶 Free WiFi</span>
+          </div>
+
+          <div class="calendar-box">
+            <label for="cal-4">Check Availability Calendar:</label>
+            <input type="text" id="cal-4" class="calendar-input" placeholder="Select dates to check...">
+          </div>
+
+          <a href="https://www.booking.com/hotel/gr/ntolos-house-old-town.html" target="_blank" class="btn">Book on Booking.com</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Kavala Stays & Apartments. All rights reserved.</p>
+  </footer>
+
+  <!-- Flatpickr JS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script>
+    // Sample booked dates for demonstration (Format: YYYY-MM-DD)
+    const blockedDatesProp1 = ["2026-10-01", "2026-10-02", "2026-10-03"];
+    const blockedDatesProp2 = ["2026-10-10", "2026-10-11", "2026-10-12"];
+    const blockedDatesProp3 = ["2026-10-14", "2026-10-15", "2026-10-16"];
+    const blockedDatesProp4 = ["2026-10-20", "2026-10-21"];
+
+    flatpickr("#cal-1", { mode: "range", minDate: "today", disable: blockedDatesProp1, dateFormat: "Y-m-d" });
+    flatpickr("#cal-2", { mode: "range", minDate: "today", disable: blockedDatesProp2, dateFormat: "Y-m-d" });
+    flatpickr("#cal-3", { mode: "range", minDate: "today", disable: blockedDatesProp3, dateFormat: "Y-m-d" });
+    flatpickr("#cal-4", { mode: "range", minDate: "today", disable: blockedDatesProp4, dateFormat: "Y-m-d" });
+  </script>
+</body>
+</html>
